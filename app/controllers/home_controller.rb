@@ -12,6 +12,9 @@ MyApp.get "/server" do
 	@r2 = Check.evaluate_a2(@ans_array[1])
 	@r3 = Check.evaluate_a3(@ans_array[2])
 
-	return Check.results_hash(@r1, @r2, @r3)
+	@results = Check.results_hash(@r1, @r2, @r3)
+
+	require 'json'
+    return JSON.generate(@results)
 
 end

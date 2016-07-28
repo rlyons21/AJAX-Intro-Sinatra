@@ -25,16 +25,20 @@ window.addEventListener("load", function(){
 
 		check.addEventListener("load", function(correctness){
 			var results = document.getElementsByClassName("result");
-			var r = correctness.target.responseText;
+			var r = correctness.target.response;
+			var user_results = JSON.parse(r);
 
-			
+	
 
-			results[0].innerHTML = "1. " + r[0];
-			
+			results[0].innerHTML = "1. " + user_results.r1;
+			results[1].innerHTML = "2. " + user_results.r2;
+			results[2].innerHTML = "3. " + user_results.r3;
+
 
 		});
 
-		check.open("get", "/server?string=" + get_responses[0].value +","+ get_responses[1].value +","+ get_responses[2].value);
+
+		check.open("get", "/server?string=" + get_responses[0].value + "," + get_responses[1].value + "," + get_responses[2].value);
 		check.send();
 	});
 
