@@ -13,6 +13,7 @@ window.addEventListener("load", function(){
 
 		check.addEventListener("load", function(correctness){
 			var r1 = correctness.target.responseText;
+
 			results[0].innerHTML = "1. " + r1;
 
 		});

@@ -1,13 +1,13 @@
 
 class Check
 
-
 	def Check.evaluate_a1(a1)
-		if(a1 == "6"){
+		if(a1 == "6")
 			return "Correct"
-		} else {
+		else 
 			return "Incorrect"
-		}
+		end
+		
 	end
 
 	def Check.make_results_array(r1)
