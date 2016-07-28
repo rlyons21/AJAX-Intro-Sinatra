@@ -18,7 +18,7 @@ window.addEventListener("load", function(){
 
 		});
 
-		check.open("get", "/server?" + get_responses[0].value);
+		check.open("get", "/server?string=" + get_responses[0].value);
 		check.send();
 	});
 
